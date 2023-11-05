@@ -119,7 +119,7 @@ class UsuarioController {
 		try{
 		const usuario = req.body;
 		const [result] = await pool.query (`DELETE FROM usuarios WHERE id_usuario=(?)`, [usuario.id_usuario]);
-		res.json({"Libro eliminado": result.affectedRows});
+		res.json({"Usuario eliminado": result.affectedRows});
 		} catch (error){ res.json({"Error": error.message});
 
 		}
